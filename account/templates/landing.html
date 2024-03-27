@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Title</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+
+        <!-- Bootstrap CSS v5.2.1 -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+        <script
+        src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"
+    ></script>
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"
+    ></script>
+    <style>
+        body {
+            font-family: sans-serif;
+            /* {% comment %} background-color: #f2f2f2; {% endcomment %} */
+            /* background-image: ; */
+        }
+
+        .hero {
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            
+            background-color: rgb(29, 28, 28);
+            /* background-image: url("https://images.pexels.com/photos/1454360/pexels-photo-1454360.jpeg?auto=compress&cs=tinysrgb&w=600"); */
+            background-size: cover; 
+            background-position: center; 
+        }
+
+        .hero .content {
+            color: white;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            line-height: 1.5;
+        }
+
+        .features {
+            padding: 5rem 0;
+        }
+
+        .features .card {
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .features .card-body {
+            padding: 2rem;
+        }
+
+        .features .card-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            text-align: center;
+            color: #4CAF50;
+        }
+
+        .call-to- action {
+            text-align: center;
+            padding-top: 5rem;
+        }
+
+        .call-to-action a {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+
+        .call-to-action a:hover {
+            background-color: #3e8e41;
+        }
+        .h3 {
+            color: white;
+        }
+        .p {
+            color: white;
+        }
+    </style>
+    </head>
+
+    <body>
+        
+    <header class="">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="https://img.freepik.com/premium-vector/education-school-logo-design_586739-1335.jpg" alt="" width="30" height="24" class="d-inline-block align-text-top">School Way</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Features</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        
+                    <section class="hero">
+                        <div class="container">
+                            <div class="content mt-3">
+                                <h1>Connect with the world. Join School way today.</h1>  <p>Mway is a vibrant social media platform that allows you to connect with friends, family, and like-minded individuals. Share your thoughts, experiences, and interests in a fun and engaging environment. Discover new communities, express yourself freely, and be part of something bigger.</p>  </div>
+                        </div><br>
+                        <div class="">
+                            <a href="{% url 'log' %}">
+                                <button type="button" class="btn btn-outline-primary">Get Started!</button>
+                            </a>
+                        </div>
+                        
+                        <div class="mt-4">
+                            <img class="rounded" src="https://media.istockphoto.com/id/1255389068/photo/happy-woman-in-a-wheelchair-working-on-laptop-at-home.jpg?s=612x612&w=0&k=20&c=SMJgsOsjmOYMSHSuaNqMELYC4Wtbset82sl_qwlvvz8=" alt="">
+                        </div>
+                        <div class="mt-3 container">
+                            <h3 class="text-white">Schoolway: Where Learning Meets Socializing</h3>
+                            <p class="text-white"><b>magine a world where social media feeds your curiosity instead of draining it</b>. Schoolway makes that world a reality.
+                                 Here, learning isn't just encouraged, it's contagious.Ditch the negativity and endless scrolling. Schoolway curates positive and informative content, sparking discussions about 
+                                 science, current events, and the things that matter to students.  Engage with classmates and educators in a safe space that fosters healthy debate and intellectual growth.
+
+                                
+                                
+                                <p class="text-white"></p>
+                                
+                                <h5 class="text-white">Your School, Virtually Connected:</h5>
+                                
+                                <p class="text-white">Schoolway bridges the gap between physical classrooms and the online world. Dedicated sections for each grade level 
+                                and course allow you to connect with classmates, share study tips, and form project groups that transcend physical limitations.</p>
+                        </div>
+                        <div class="container ">
+                            <img class="shadow-sm  rounded" src="https://proactiveapproaches.co.uk/wp-content/uploads/2023/12/Empowering-Students-Voices-768x512.jpg" alt="">
+                        </div>
+                        
+                        <div class="m-4 container">
+                            <h3 class="text-white">Empowering Student Voices</h3>
+                            <p class="text-white"><b>Beyond the Textbook:</b> Schoolway goes beyond the limitations of traditional textbooks. Dive deep into topics through curated content, including articles, videos, and interactive elements. Share your unique perspectives and spark discussions with classmates from diverse backgrounds.
+                                <b>>Building Confidence Through Communication:</b> Refine your communication skills in a safe and supportive environment. Practice clear and concise writing while expressing your ideas on relevant topics. Learn to debate respectfully and learn from differing viewpoints.
+                                <b>Social Media Done Right:</b> Schoolway isn't your typical social media platform. Here, you can ditch the negativity and endless scrolling. We focus on fostering meaningful connections and building a positive online learning community</p>
+                        </div>
+
+                    </section>
+                    
+
+                    
+
+    
+
+
+    </body>
+</html>

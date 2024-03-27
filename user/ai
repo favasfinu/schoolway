@@ -1,0 +1,37 @@
+class ChatBot:
+    def __init__(self, responses):
+        self.responses = responses
+
+    def respond(self, user_input):
+        if user_input in self.responses:
+            return self.responses[user_input]
+        else:
+            return "I'm sorry, I don't understand that."
+
+def main():
+    # Define your responses here
+    responses = {
+        "hi": "Hello!",
+        "how are you?": "I'm doing well, thank you.",
+        "what's your name?": "I'm a chatbot.",
+        "bye": "Goodbye! Have a great day.",
+        "what is python,python":"Python is a high-level, interpreted programming language known for its simplicity and readability. It was created by Guido van Rossum and first released in 1991. Python emphasizes code readability and a syntax that allows programmers to express concepts in fewer lines of code compared to languages like C++ or Java , write 'python more' for more about python main topics",
+        "python more":"syntax,data types,control flow,functions,modules,oop,error handling,frameworks",
+        "syntax":"Python's syntax refers to the rules and structure used to write Python code. This includes elements like indentation (for code blocks), variable assignment, data types, control flow constructs (if statements, loops), function and class definitions, and more",
+        "data types":"Python supports various data types, including integers, floats, strings, lists, tuples, dictionaries, sets, and more. Understanding how to work with these data types is essential for manipulating data in Python programs.",
+    }
+
+    chatbot = ChatBot(responses)
+
+    print("Welcome to the ChatBot! Type 'bye' to exit.")
+
+    while True:
+        user_input = input("You: ").lower()
+        if user_input == 'bye':
+            print(chatbot.respond(user_input))
+            break
+        else:
+            print("john:", chatbot.respond(user_input))
+
+if __name__ == "__main__":
+    main()

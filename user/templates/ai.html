@@ -1,0 +1,21 @@
+{% extends 'navbar.html'%}
+{% block nav %}
+
+
+    <h1>Welcome to the Chatbot</h1>
+    
+    <div id="chatbox">
+        {% if response %}
+            <p>{{ response }}</p>
+        {% endif %}
+    </div>
+    
+    <form action="" method="post">
+        {% csrf_token %}
+        <label for="user_input">Type your message:</label><br>
+        <input type="text" id="user_input" name="user_input"><br>
+        <button type="submit">Send</button>
+    </form>
+
+
+{% endblock nav %}

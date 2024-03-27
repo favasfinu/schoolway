@@ -1,0 +1,123 @@
+{% extends 'navbar.html' %}
+{% block nav %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>8th Grade Launchpad</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jY38PBHQiwNzxEh7qkZv1LTT4v/mv" crossorigin="anonymous">
+  <style>
+    .jumbotron {
+      background-color: #d7e8f0;
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+    .card {
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .card-img-top {
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px 10px 0 0;
+    }
+    .badge {
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="jumbotron">
+    <h1 class="display-4">Welcome to Your 8th Grade Launchpad!</h1>
+    <p class="lead">Blast off on your learning journey, earn badges, and conquer new skills!</p>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <div class="card">
+          <img src="https://picsum.photos/id/263/200/150?grayscale" class="card-img-top" alt="Science">
+          <div class="card-body">
+            <h5 class="card-title">Science Explorer (50 pts)</h5>
+            <p class="card-text">Explore the universe, delve into the human body, and conduct mind-blowing experiments!</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="badge bg-primary">New Experiment!</span>
+              <a href="#" class="btn btn-primary">Launch Mission!</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="card">
+          <img src="https://picsum.photos/id/264/200/150?grayscale" class="card-img-top" alt="Math Master">
+          <div class="card-body">
+            <h5 class="card-title">Math Master (75 pts)</h5>
+            <p class="card-text">Master algebra, geometry, and data analysis. Become a problem-solving whiz!</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="badge bg-warning">Challenge Mode!</span>
+              <a href="#" class="btn btn-primary">Level Up!</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="card">
+          <img src="https://picsum.photos/id/265/200/150?grayscale" class="card-img-top" alt="History Detective">
+          <div class="card-body">
+            <h5 class="card-title">History Detective (100 pts)</h5>
+            <p class="card-text">Travel through time, analyze historical events, and uncover the mysteries of the past.</p>
+            <div class="d-flex justify-content-between align-items-center">
+                <img src="https://img.icons8.com/color/48/000000/detective.png" alt="Badge: History Detective">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <div class="card">
+          <img src="https://picsum.photos/id/266/200/150?grayscale" class="card-img-top" alt="English Explorer">
+          <div class="card-body">
+            <h5 class="card-title">English Explorer (25 pts)</h5>
+            <p class="card-text">Explore different literary genres, develop critical thinking skills, and master the art of communication.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <a href="https://www.khanacademy.org/humanities/english-language-arts/v/punctuation-rules" target="_blank" class="btn btn-outline-primary">Grammar Games</a>
+              <a href="https://www.folger.edu/shakespeare" target="_blank" class="btn btn-outline-primary">Explore Shakespeare</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="card">
+          <img src="https://picsum.photos/id/267/200/150?grayscale" class="card-img-top" alt="Social Studies Navigator">
+          <div class="card-body">
+            <h5 class="card-title">Social Studies Navigator (40 pts)</h5>
+            <p class="card-text">Explore different cultures, analyze current events, and become a global citizen.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <a href="https://www.nationalgeographic.org/education/resource/current-events" target="_blank" class="btn btn-outline-primary">Current Events</a>
+              <a href="https://www.un.org/en/sections/issues-depth/peace-and-security/" target="_blank" class="btn btn-outline-primary">Global Issues</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="card">
+          <img src="https://picsum.photos/id/268/200/150?grayscale" class="card-img-top" alt="Elective Choice">
+          <div class="card-body">
+            <h5 class="card-title">Elective Choice (varies)</h5>
+            <p class="card-text">Choose an elective that interests you! Explore art, music, technology, or other exciting subjects.</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <a href="#" class="btn btn-outline-primary">Explore Electives</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
+{% endblock nav %}

@@ -1,0 +1,129 @@
+{% extends 'navbar.html' %}
+{% block nav %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>9th Grade Quest</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jY38PBHQiwNzxEh7qkZv1LTT4v/mv" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-zmvONaOnNLl7bbeyJjwrJaHcu4zGJwGwzYWxDl3vXLOn9zGTjstPSME4iDwCeOslDmOJaiBJYWzlmW/XlqwPJkA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    .jumbotron {
+      background-color: #e8e0f7;
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+    .progress {
+      height: 15px;
+      border-radius: 5px;
+      background-color: #ddd;
+    }
+    .progress-bar {
+      background-color: #007bff;
+    }
+    .subject-icon {
+      font-size: 2rem;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="jumbotron">
+    <h1 class="display-4">Welcome to Your 9th Grade Quest: Master Your Skills!</h1>
+    <p class="lead">Embark on your learning journey, complete quests, and become a knowledge champion!</p>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">English <i class="fas fa-book subject-icon" data-bs-toggle="modal" data-bs-target="#englishModal"></i></h5>
+            <div class="progress">
+              <div class="progress-bar" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Math <i class="fas fa-calculator subject-icon" data-bs-toggle="modal" data-bs-target="#mathModal"></i></h5>
+            <div class="progress">
+              <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Science <i class="fas fa-flask subject-icon" data-bs-toggle="modal" data-bs-target="#scienceModal"></i></h5>
+            <div class="progress">
+              <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 mb-3">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">History <i class="fas fa-globe subject-icon" data-bs-toggle="modal" data-bs-target="#historyModal"></i></h5>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Social Studies <i class="fas fa-map-marker-alt subject-icon" data-bs-toggle="modal" data-bs-target="#socialStudiesModal"></i></h5>
+                <div class="progress">
+                  <div class="progress-bar" role="progressbar" style="width: 40%;" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Elective (Choose One)</h5>
+                <p class="card-text">Explore a subject that interests you!</p>
+                <a href="#" class="btn btn-outline-primary">Explore Electives</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="modal fade" id="englishModal" tabindex="-1" aria-labelledby="englishModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="englishModalLabel">English Quest</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>Sharpen your writing skills and explore literature! Here are some resources:</p>
+              <ul>
+                <li><a href="https://owl.purdue.edu/" target="_blank">Purdue Online Writing Lab (OWL)</a></li>
+                <li><a href="https://www.poetryfoundation.org/" target="_blank">Poetry Foundation</a></li>
+                <li><a href="https://www.folger.edu/shakespeare" target="_blank">Folger Shakespeare Library</a></li>
+              </ul>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    </body>
+</html>
+{% endblock nav %}    
+    
