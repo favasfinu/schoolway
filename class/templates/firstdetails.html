@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Title</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+        />
+
+        <!-- Bootstrap CSS v5.2.1 -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous"
+        />
+    </head>
+
+    <body>
+
+            <style>
+                .activity-card {
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                padding: 1.5rem;
+                margin-bottom: 2rem;
+                }
+                .activity-card img {
+                width: 100%;
+                height: 150px;
+                object-fit: cover;
+                margin-bottom: 1rem;
+                }
+                .activity-card h5 {
+                font-size: 18px;
+                font-weight: bold;
+                }
+            </style>
+            </head>
+            <body>
+
+            <div class="container">
+                <h1>Explore Counting Activities!</h1>
+                <p>Let's have fun learning numbers with these interactive activities:</p>
+                <div class="row">
+                <div class="col-md-4">
+                    <div class="activity-card">
+                    <img src="https://i.ytimg.com/vi/7D4K9oi7oBM/maxresdefault.jpg" alt="Counting Song">
+                    <h5>Sing Along to Counting Songs!</h5>
+                    <p>Learn catchy songs that make counting fun and memorable.</p>
+                    <a href="#" class="btn btn-primary">Sing & Learn!</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="activity-card">
+                    <img src="https://thesoftroots.com/wp-content/uploads/2020/10/coumting-numbers-1024x576.png" alt="Counting Games">
+                    <h5>Play Interactive Counting Games!</h5>
+                    <p>Practice your counting skills with engaging games that challenge you.</p>
+                    <a href="{% url 'game' %}" class="btn btn-primary">Let's Play!</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="activity-card">
+                    <img src="https://t3.ftcdn.net/jpg/04/83/06/04/360_F_483060435_HpVW7Mrl6BqVmx40gACIbywfJoz159FH.jpg" alt="Number Tracing">
+                    <h5>Trace and Write Numbers!</h5>
+                    <p>Improve your fine motor skills and learn to write numbers 1 to 10.</p>
+                    <a href="{% url 'traceandwrite' %}" class="btn btn-primary">Start Tracing!</a>
+                    </div>
+                </div>
+                </div>
+                <div class="row">
+                <div class="col-md-4">
+                    <div class="activity-card">
+                    <img src="#" alt="Number Matching">
+                    <h5>Match Numbers with Objects!</h5>
+                    <p>Test your number recognition skills by matching numbers with objects.</p>
+                    <a href="#" class="btn btn-primary">Match Away!</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="activity-card">
+                    <img src="path/to/activity5.jpg" alt="Counting Challenge">
+                    <h5>Counting Challenge!</h5>
+                    <p>Put your counting skills to the test with fun and interactive challenges.</p>
+                    <a href="#" class="btn btn-primary">Take the Challenge!</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="activity-card">
+                    <img src="path/to/activity6.jpg" alt="Coloring Numbers">
+                    <h5>Coloring Fun with Numbers!</h5>
+                    <p>Combine learning numbers with creativity by coloring number sheets.</p>
+                    <a href="#" class="btn btn-primary">Color Numbers!</a>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+
+
+
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+            crossorigin="anonymous"
+        ></script>
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>

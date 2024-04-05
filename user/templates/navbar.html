@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <title>Title</title>
+        <title>school Way</title>
         <!-- Required meta tags -->
         <meta charset="utf-8" />
         <meta
@@ -29,15 +29,14 @@
         ></script>
 
 
-
     </head>
 
     <body>
 
     
     <nav class="navbar navbar-expand-lg fixed-top bg-secondary">
-        <div class="container">
-            <a class="navbar-brand" href="#">School Way</a>
+        <div class="container-fluid">
+            <a class="navbar-brand ms-1" href="#">School Way</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -50,19 +49,21 @@
                         <a class="nav-link active" href="{% url 'details' %}">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact Us</a>
+                        <a class="nav-link" href="{% url 'contactus' %}">Contact Us</a>
                     </li>
                 </ul>
-                <form class="d-flex ms-auto"> <input class="form-control me-2" type="search" placeholder="Search for creators, schools, and projects" aria-label="Search">
+                <form class="d-flex ms-auto"> <input class="form-control me-1" type="search" placeholder="Search for creators, schools, and projects" aria-label="Search">
                     <button class="btn rounded-pill btn-success" type="submit">Search</button>
                 </form>
                 <div class="d-flex align-items-center ms-3"> <a href="{% url 'upload' %}" class="btn rounded-pill btn-primary">Create</a>
+        
+
                     <button class="btn btn-link p-0 ms-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#profileSidebar" aria-controls="profileSidebar">
                         <i class="fa-solid fa-user-circle fa-lg"></i> </button>
                 </div>
                 <div>
                     <a class="navbar-brand rounded-circl" href="#">
-                        <img src="https://www.hdwallpapersfreedownload.com/uploads/large/animals/monkey-wallpapers-hd.jpg" width="30" height="30" class="rounded-circl" alt="profile image">
+                        <img src="https://www.hdwallpapersfreedownload.com/uploads/large/animals/monkey-wallpapers-hd.jpg" width="30" height="30" class="rounded-circl" alt="">
                     </a>
                 </div>
             </div>

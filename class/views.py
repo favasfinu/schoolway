@@ -1,6 +1,10 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView
 from django.shortcuts import render
+import math 
+import random
+from django.views import View
+
 
 # Create your views here.
 
@@ -60,3 +64,37 @@ class FourView(TemplateView):
     
 class FiveView(TemplateView):
     template_name="five.html"
+
+class SixView(TemplateView):
+    template_name="six.html"
+
+class SevenView(TemplateView):
+    template_name="seven.html"
+
+class EightView(TemplateView):
+    template_name="eight.html"
+
+class NineView(TemplateView):
+    template_name="nine.html"
+
+class TenView(TemplateView):
+    template_name="ten.html"
+
+class firstdetailView(TemplateView):
+    template_name="firstdetails.html"
+
+class Traceandweite(TemplateView):
+    template_name="traceandwrite.html"
+
+
+
+class CountingGameView(View):
+  def get(self, request):
+    correct_answer = self.generate_random_number()
+    context = {'correct_answer': correct_answer, 'result': ''}
+    return render(request, 'countinggame.html', context)
+
+  def generate_random_number(self):
+    return random.randint(0, 10)   # Generate random number between 1 and 3
+
+

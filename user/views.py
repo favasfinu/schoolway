@@ -1,6 +1,6 @@
 from django.shortcuts import render,redirect
 from django.views.generic import TemplateView,ListView,DetailView
-from account.models import Posting,likes
+from account.models import Posting,likes,Newsfeed
 from django.shortcuts import get_object_or_404
 from django.http import HttpResponseRedirect
 from django.urls import reverse
@@ -35,6 +35,11 @@ class HomeView(ListView):
         res['like'] = like
         return res
 
+class NewsView(ListView):
+    template_name="news.html"
+    queryset=Newsfeed.objects.all().order_by('-created_at')
+    context_object_name="news"
+    
 
 # class UploadView(TemplateView):
 #     template_name="home.html"
@@ -46,8 +51,18 @@ class UploadView(TemplateView):
         user = request.user
         caption = request.POST.get('caption')
         image = request.FILES.get('post_image')
-        Posting.objects.create(user = user,image=image,caption=caption)
+        video = request.FILES.get('post_video')
+        Posting.objects.create(user = user,image=image,video=video,caption=caption)
         return redirect('home')
+    
+class NewsuploadView(TemplateView):
+    template_name="newsupload.html"
+    def post(self,request):
+        user = request.user
+        caption = request.POST.get('caption')
+        image = request.FILES.get('news_image')
+        Newsfeed.objects.create(user = user,image=image,caption=caption)
+        return redirect('news')
 
 
     # queryset=Userprofile.objects.all()
@@ -64,9 +79,33 @@ def add_like(request,*args,**kwargs):
 
 
                     
-@method_decorator(dec,name="dispatch")
-class ChatcenterView(TemplateView):
-    template_name="chatcenter.html"
+# @method_decorator(dec,name="dispatch")
+# class ChatcenterView(TemplateView):
+#     template_name="chatcenter.html"
+
+
+from django.shortcuts import render, redirect
+from django.views import View
+from account.models import Message
+
+
+
+
+class ChatRoomView(View):
+    def get(self, request):
+        messages = Message.objects.all().order_by('-timestamp')  # Get all messages in reverse chronological order
+        return render(request, 'chatcenter.html', {'messages': messages})
+
+    def post(self, request):
+        if request.method == 'POST':
+            content = request.POST['content']
+            # Save message based on user (optional)
+            message = Message.objects.create(content=content)  # Create a new message object
+            return redirect('chat_room')  # Redirect back to the chat room
+        else:
+            return redirect('chat_room')  # Handle non-POST requests by redirecting
+
+
 
 @method_decorator(dec,name="dispatch")
 class LeftsideView(TemplateView):
@@ -76,9 +115,9 @@ class LeftsideView(TemplateView):
 class Schoolhome(TemplateView):
     template_name="schoolhome.html"
 
-@method_decorator(dec,name="dispatch")
-class NewsView(TemplateView):
-    template_name="news.html"
+# @method_decorator(dec,name="dispatch")
+# class NewsView(TemplateView):
+#     template_name="news.html"
 
 
 def chat(request):
@@ -144,3 +183,15 @@ def post_detail(request, pk):
       'form': form,
   }
   return render(request, 'template/upload.html', context)
+
+
+
+
+class Contactus(TemplateView):
+    template_name="contactus.html"
+
+class Sidebar(TemplateView):
+    template_name="sidebar.html"
+
+class SettingsView(TemplateView):
+    template_name="settings.html"

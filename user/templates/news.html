@@ -28,7 +28,17 @@
             crossorigin="anonymous"
         ></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <style>
+            /* .feed_killer{
+                height: 300px;
+                width: 250px;
 
+            } */
+            /* .story-option{
+                height: 600px;
+               
+            } */
+        </style>
 
     </head>
 
@@ -36,7 +46,7 @@
 
     
     <nav class="navbar navbar-expand-lg fixed-top bg-danger">
-        <div class="container ">
+        <div class="container-fluid ">
             <a class="navbar-brand" href="#">School Way <i class="bi bi-newspaper"></i></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -47,7 +57,7 @@
                     </li>
                     <li class="nav-item">
                         
-                        <a class="nav-link" href="#">About Us</a>
+                        <a class="nav-link" href="{% url 'details' %}">About Us</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Contact Us</a>
@@ -56,7 +66,8 @@
                 <form class="d-flex ms-auto"> <input class="form-control me-2" type="search" placeholder="Search for creators, schools, and projects" aria-label="Search">
                     <button class="btn btn-success" type="submit">Search</button>
                 </form>
-                <div class="d-flex align-items-center ms-3"> <a href="{% url 'upload' %}" class="btn btn-primary">Create</a>
+
+                <div class="d-flex align-items-center ms-1 ms-3"> <a href="{% url 'newsupload' %}" class="btn btn-primary">upload news</a>
                     <button class="btn btn-link p-0 ms-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#profileSidebar" aria-controls="profileSidebar">
                         <i class="fa-solid fa-user-circle fa-lg"></i> </button>
                 </div>
@@ -70,20 +81,25 @@
     </nav>
 <br><br>
 
-<div class="container mt-3">
-    <div class="row">
-        <iframe src="https://www.sciencenews.org/" height="600" title="news"></iframe>
-        <h3 class="text-bg-dark">SCIENCE NEWS</h3>
-    </div>
-</div>    
-<br><br>
-<!-- <div class="container mt-3">
-    <div class="row">
-        <iframe src="https://news.google.com/topics/CAAqKggKIiRDQkFTRlFvSUwyMHZNRGx6TVdZU0JXVnVMVWRDR2dKSlRpZ0FQAQ?hl=en-IN&gl=IN&ceid=IN%3Aen" height="500" title="news"></iframe>
-        <h3 class="text-bg-dark">BUSSINESS NEWS</h3>
-    </div>
-</div>   -->
 
-        
+<div class="container">
+    <div class="row story-options mt-5 ">
+        {% for i in news %}
+          <div class="col-md-3">
+            <div class="card mb-3 story-option d-flex flex-column justify-content-center align-items-center ">
+              <img src="{{ i.image.url }}" alt="Story Image" id="id" class="img-fluid story-image">
+              <div class=" d-flex flex-column justify-content-end">
+                <p class="card-title"> @{{i.user}} </p>
+                <p class="card-text">{{i.caption}}</p>
+    
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+    </div>
+</div>
+
+<br><br>      
 </body>
-</html>
+</html> 
+

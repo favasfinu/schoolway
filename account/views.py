@@ -3,7 +3,7 @@ from django.views.generic.base import TemplateView
 from django.views import View
 from .forms import RegForm,LogForm
 from django.contrib import messages
-from django.contrib.auth import authenticate,login
+from django.contrib.auth import authenticate,login,logout
 # Create your views here.
 
 class LandingView(TemplateView):
@@ -44,5 +44,9 @@ class RegView(View):
             return redirect(request,"reg.html",{"form":form_data})
 
 
+class logoutView(View):
+    def get(self,request):
+        logout(request)
+        return redirect('log')
 
 

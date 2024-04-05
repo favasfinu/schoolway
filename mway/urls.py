@@ -19,12 +19,14 @@ from django.urls import path,include
 from account.views import LandingView
 from django.conf import settings
 from django.conf.urls.static import static
+from django.views.generic import RedirectView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',LandingView.as_view(),name="landing"),
     path('acc/',include("account.urls")),
     path('user/',include("user.urls")),
-    path('class/',include("class.urls"))
+    path('class/',include("class.urls")),
+
 
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
